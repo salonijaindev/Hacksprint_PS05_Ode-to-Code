@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body
+        {
+            background-image: url('bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+             font-size: 13pt; 
+        }
+        div.polaroid 
+        {
+            width: 284px;
+            padding: 10px 10px 20px 10px;
+            border: 1px solid #BFBFBF;
+            background-color: white;
+            box-shadow: 10px 10px 5px #aaaaaa;
+        }
+        div.rotate_right 
+        {
+            float: left;
+            -ms-transform: rotate(7deg); /* IE 9 */
+            -webkit-transform: rotate(7deg); /* Safari */
+            transform: rotate(7deg);
+        }
+        div.rotate_left 
+        {
+            float: left;
+            -ms-transform: rotate(-8deg); /* IE 9 */
+            -webkit-transform: rotate(-8deg); /* Safari */
+            transform: rotate(-8deg);
+        }
+        a:visited 
+        {
+            color: #A1E8AF;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:link 
+        {
+            color: #fff;
+            background-color: transparent;
+            text-decoration: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Stock Market - Daily News</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Ode to Code</a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="menu">
+            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+            <li><a href="news.html" onclick="toggleMenu()">News</a></li>
+            <li><a href="aboutsm.html" onclick="toggleMenu()">About</a></li>
+        </ul>
+    </header>
+    <section class="about">
+    <div class="heading">
+            <h2>Latest News<br><br></h2>
+        </div>
+        <div class="polaroid rotate_right">
+        <img src="pic1.jpg" alt="Pulpit rock" width="265" height="213">
+        <p class="caption">Sensex down 750 points</p>
+        </div>
+        <div class="polaroid rotate_left">
+        <img src="pic2.jpg" alt="Monterosso al Mare" width="265" height="213">
+        <p class="caption">Nifty breaches 11,000</p>
+        </div>
+        <div class="polaroid rotate_right">
+        <img src="pic4.jpg" alt="Pulpit rock" width="265" height="213">
+        <p class="caption">Bharti Airtel, TCS, ICICI Bank, Bajaj Finance keep Nifty under pressure</p>
+        </div>
+        <div class="polaroid rotate_left">
+        <img src="pic3.jpg" alt="Monterosso al Mare" width="265" height="213">
+        <p class="caption">Reliance, HDFC Bank, Infosys & HUL major contributors to Nifty recovery</p>
+        </div>
+        <div class="contentBxw50">
+                <p><br><br><br><br>A free and powerful tool for Smarter Analysis of any stock. Analyze any stock at: <a href="index.html" onclick="toggleMenu()">Stock Market Predictor</a><br></p>
+        </div>
+    </section>
+    <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky',window.scrollY > 0)
+        });
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
+    <div class="copyright">
+        <p>Copyright ©Team Ode-to-Code. All Rights Reserved.</p>
+    </div>
+</body>
+</html>

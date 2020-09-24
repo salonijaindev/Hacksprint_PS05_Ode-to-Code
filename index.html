@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+        body
+        {
+            background-image: "{{ url_for('static', filename='bg.jpg') }}";
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+             font-size: 13pt; 
+        }
+    </style>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
+	<title>Stock Market Prediction</title>
+</head>
+<body>
+	<header>
+        <a href="#" class="logo">Ode to Code</a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="menu">
+            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+            <li><a href="news.html" onclick="toggleMenu()">News</a></li>
+            <li><a href="aboutsm.html" onclick="toggleMenu()">About</a></li>
+        </ul>
+    </header>
+<section class="about" id="about">
+  <div class="hmheading">
+            <h2><br><br>BEST STOCK MARKET PREDICTOR</h2>
+        </div>
+      <div class="content">
+	     <div class="contentbxw50">
+            <p>Subscribe for more updates and Stock Market Prediction</p>
+      </div>
+      <div class="w50">
+          <img src="{{ url_for('static', filename='hmpic.jpg') }}" class="hmimg" width="550" height="300">
+      </div>
+	</div>
+  <div class="content">
+  <div class="formBx">
+        <form action="." method="post">
+          <h3>Predict Stock Market</h3>
+          <input type="text" name="comname" placeholder="Company Name">
+          <input type="submit" value="Predict">
+        </form>
+      </div>
+    </div>
+</section>
+<script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky',window.scrollY > 0)
+        });
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
+    <div class="copyright">
+        <p>Copyright ©Team Ode-to-Code. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
