@@ -4,17 +4,17 @@
     <style>
         body
         {
-            background-image: url('bg.jpg');
+            background: url("{{ url_for("static", filename="bg.jpg") }}");
             background-repeat: no-repeat;
             background-size: cover;
             font-family: 'Helvetica', 'Arial', sans-serif;
-             font-size: 13pt; 
+    font-size: 19px;
         }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
     <title>About Stock Market</title>
 </head>
 <body>
@@ -22,9 +22,10 @@
         <a href="#" class="logo">Ode to Code</a>
         <div class="toggle" onclick="toggleMenu()"></div>
         <ul class="menu">
-            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
-            <li><a href="news.html" onclick="toggleMenu()">News</a></li>
-            <li><a href="aboutsm.html" onclick="toggleMenu()">About</a></li>
+            <li><a href="{{ url_for('index') }}" onclick="toggleMenu()">Home</a></li>
+            <li><a href="{{ url_for('login') }}" onclick="toggleMenu()">Login</a></li>
+            <li><a href="{{ url_for('news') }}" onclick="toggleMenu()">News</a></li>
+            <li><a href="{{ url_for('aboutsm') }}" onclick="toggleMenu()">About</a></li>
         </ul>
     </header>
     <section class="about" id="about">
@@ -37,7 +38,7 @@
                 <p><br>The stock market refers to public markets that exist for issuing, buying, and selling stocks that trade on a stock exchange or over-the-counter. Stocks, also known as equities, represent fractional ownership in a company, and the stock market is a place where investors can buy and sell ownership of such investible assets. An efficiently functioning stock market is considered critical to economic development, as it gives companies the ability to quickly access capital from the public.<br><br></p>
         </div>
         <div class="w50">
-                <img src="img1.jpg" class="img">
+                <img src="{{ url_for('static', filename='img1.jpg') }}" class="img">
         </div>
     </div>
         <div class="contentBxw51">

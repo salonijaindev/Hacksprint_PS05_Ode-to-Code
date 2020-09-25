@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <style>
+    <style>
         body
         {
-            background-image: "{{ url_for('static', filename='bg.jpg') }}";
+            background: url("{{ url_for("static", filename="img/bg.jpg") }}");
             background-repeat: no-repeat;
             background-size: cover;
             font-family: 'Helvetica', 'Arial', sans-serif;
-             font-size: 13pt; 
+            font-size: 19px;
         }
     </style>
   <meta charset="UTF-8">
@@ -17,14 +17,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
 	<title>Stock Market Prediction</title>
 </head>
-<body>
+<body style="background-image: url({{ url_for('static', filename='img/bg.jpg') }})">
 	<header>
         <a href="#" class="logo">Ode to Code</a>
         <div class="toggle" onclick="toggleMenu()"></div>
         <ul class="menu">
-            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
-            <li><a href="news.html" onclick="toggleMenu()">News</a></li>
-            <li><a href="aboutsm.html" onclick="toggleMenu()">About</a></li>
+            <li><a href="{{ url_for('index') }}" onclick="toggleMenu()">Home</a></li>
+            <li><a href="{{ url_for('login') }}" onclick="toggleMenu()">Login</a></li>
+            <li><a href="{{ url_for('news') }}" onclick="toggleMenu()">News</a></li>
+            <li><a href="{{ url_for('aboutsm') }}" onclick="toggleMenu()">About</a></li>
         </ul>
     </header>
 <section class="about" id="about">
@@ -64,5 +65,7 @@
     <div class="copyright">
         <p>Copyright ©Team Ode-to-Code. All Rights Reserved.</p>
     </div>
+    {% block content %}
+{% endblock %}
 </body>
 </html>
