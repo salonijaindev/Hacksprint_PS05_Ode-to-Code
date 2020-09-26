@@ -1,13 +1,13 @@
 # Hacksprint_PS05_Ode-to-Code
 
 # Logo
-<img src ="Readme Images/logo.png" style = "width: 25%;">
+<img src ="Readme Images/logo.png" style = "width: 15%;">
 
 # Website
 
 # App Interface
-<img src ="Readme Images/Company status.png" style = "width: 900">
-<img src ="Readme Images/Home.png" style = "width: 350">
+<img src ="Readme Images/Company status.png" width=900>
+<img src ="Readme Images/Home.png"width= 350">
 
 # Features
   - Portfolio
