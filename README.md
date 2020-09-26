@@ -7,7 +7,7 @@
 
 # App Interface
 <img src ="Readme Images/Company status.png" style = "width: 25%;">
-<img src ="Readme Images/home.png" style = "width: 25%;">
+<img src ="Readme Images/Home.png" style = "width: 25%;">
 
 # Features
   - Portfolio
