@@ -1,5 +1,8 @@
 # Hacksprint_PS05_Ode-to-Code
 
+# Logo
+<img src ="Readme_Images/logo.png" style = "width: 50%;">
+
 # Website
 
 # App Interface
