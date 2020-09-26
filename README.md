@@ -6,7 +6,7 @@
 # Website
 
 # App Interface
-<img src ="Readme Images/Home.png"width= 50">
+<img src ="Readme Images/Home.png" width= 50">
 
 # Features
   - Portfolio
