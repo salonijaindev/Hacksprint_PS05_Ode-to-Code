@@ -6,7 +6,7 @@
 # Website
 
 # App Interface
-
+<img src ="Readme Images/Company status.png" style = "width: 25%;">
 
 # Features
   - Portfolio
