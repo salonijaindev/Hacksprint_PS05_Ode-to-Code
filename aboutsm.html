@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body
+        {
+            background: url("{{ url_for("static", filename="bg.jpg") }}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 19px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
+    <title>About Stock Market</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Ode to Code</a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="menu">
+            <li><a href="{{ url_for('index') }}" onclick="toggleMenu()">Home</a></li>
+            <li><a href="{{ url_for('login') }}" onclick="toggleMenu()">Login</a></li>
+            <li><a href="{{ url_for('news') }}" onclick="toggleMenu()">News</a></li>
+            <li><a href="{{ url_for('aboutsm') }}" onclick="toggleMenu()">About</a></li>
+        </ul>
+    </header>
+    <section class="about" id="about">
+        <div class="heading">
+            <h2>About Stock Market</h2>
+        </div>
+        <div class="content">
+        <div class="contentBxw50">
+                <h3>What is the Stock Market?</h3>
+                <p><br>The stock market refers to public markets that exist for issuing, buying, and selling stocks that trade on a stock exchange or over-the-counter. Stocks, also known as equities, represent fractional ownership in a company, and the stock market is a place where investors can buy and sell ownership of such investible assets. An efficiently functioning stock market is considered critical to economic development, as it gives companies the ability to quickly access capital from the public.<br><br></p>
+        </div>
+        <div class="w50">
+                <img src="{{ url_for('static', filename='img1.jpg') }}" class="img">
+        </div>
+    </div>
+        <div class="contentBxw51">
+                <h3><br>Purposes of the Stock Market – Capital and Investment Income</h3>
+                <p><br>The stock market serves two very important purposes. The first is to provide capital to companies that they can use to fund and expand their businesses. If a company issues one million shares of stock that initially sell for $10 a share, then that provides the company with $10 million of capital that it can use to grow its business (minus whatever fees the company pays for an investment bank to manage the stock offering). By offering stock shares instead of borrowing the capital needed for expansion, the company avoids incurring debt and paying interest charges on that debt.<br><br>The secondary purpose the stock market serves is to give investors – those who purchase stocks – the opportunity to share in the profits of publicly-traded companies. Investors can profit from stock buying in one of two ways. Some stocks pay regular dividends (a given amount of money per share of stock someone owns). The other way investors can profit from buying stocks is by selling their stock for a profit if the stock price increases from their purchase price. For example, if an investor buys shares of a company’s stock at $10 a share and the price of the stock subsequently rises to $15 a share, the investor can then realize a 50% profit on their investment by selling their shares.<br></p>
+                <h3><br>History of Stock Trading</h3>
+                <p><br>Although stock trading dates back as far as the mid-1500s in Antwerp, modern stock trading is generally recognized as starting with the trading of shares in the East India Company in London.<br></p>
+                <h3><br>How Stocks are Traded – Exchanges and OTC</h3>
+                <p><br>Most stocks are traded on exchanges such as the New York Stock Exchange (NYSE) or the NASDAQ. Stock exchanges essentially provide the marketplace to facilitate the buying and selling of stocks among investors. Stock exchanges are regulated by government agencies, such as the Securities and Exchange Commission (SEC) in the United States, that oversee the market in order to protect investors from financial fraud and to keep the exchange market functioning smoothly.<br><br>Although the vast majority of stocks are traded on exchanges, some stocks are traded over-the-counter (OTC), where buyers and sellers of stocks commonly trade through a dealer, or “market maker”, who specifically deals with the stock. OTC stocks are stocks that do not meet the minimum price or other requirements for being listed on exchanges.<br><br>OTC stocks are not subject to the same public reporting regulations as stocks listed on exchanges, so it is not as easy for investors to obtain reliable information on the companies issuing such stocks. Stocks in the OTC market are typically much more thinly traded than exchange-traded stocks, which means that investors often must deal with large spreads between bid and ask prices for an OTC stock. In contrast, exchange-traded stocks are much more liquid, with relatively small bid-ask spreads.<br></p>
+        </div>
+    </section>
+    <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky',window.scrollY > 0)
+        });
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
+    <div class="copyright">
+        <p>Copyright ©Team Ode-to-Code. All Rights Reserved.</p>
+    </div>
+</body>
+</html>

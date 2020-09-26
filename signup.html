@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <style>
+        body
+        {
+            background: url("{{ url_for("static", filename="img/bg.jpg") }}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 19px;
+        }
+        a:visited {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Sign Up</title>
+  </head>
+  <body style="background-image: url({{ url_for('static', filename='img/bg.jpg') }})">
+    <div class="container">
+      <div class="row w-100 d-flex justify-content-center align-items-center main_div">
+        <div class="col-12 col-lg-6 col-md-8 col-xxl-5">
+          <div class="card py-3 px-2">
+            <p class="text-center my-3 text-capitalize"><span>Sign-Up using</span></p>
+              <div class="row mx-auto">
+                <div class="col-4">
+                <a href="https://accounts.google.com/login" target="login"><i class="fab fa-google"></i></a>
+                </div>
+                    <div class="col-4">
+                      <a href="https://www.instagram.com/" target="login"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="col-4">
+                    <a href="https://www.facebook.com/" target="login"><i class="fab fa-facebook"></i></a>
+                    </div>
+            </div>
+          <div class="division">
+            <div class="row">
+              <div class="col-6 mx-auto mb-2">
+                <span class="main-heading">Sign Up</span>
+              </div>
+            </div>
+            <form class="myform">
+              <div class="mb-3">
+
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+             
+              <div class="mb-3">
+
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Name">
+              </div>
+              <div class="mb-3">
+
+              <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter Phone Number">
+              </div>
+              <div class="mb-3">
+
+              <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Enter Date of Birth">
+              </div>
+               <div class="mb-3">
+              
+              <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password">
+              </div>
+               <div class="mb-3">
+              
+              <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Re-type Password">
+              </div>
+              <div class="row">
+              <div class="col-md-6 col-12">
+              <div class="form-group form-check text-left">
+                <input type="checkbox" class="form-check-input" name="">
+                <label class="form-check-label">Remember Me</label>
+              </div>
+            </div>
+            </div>
+            <div class="my-3">
+              <button type="button" class="btn btn-block btn-primary btn-lg">
+                <small><i class="far fa-user pr-2"></i><a href="{{ url_for('index') }}">Sign Up</a></small>
+              </button>
+            </div>
+            </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
